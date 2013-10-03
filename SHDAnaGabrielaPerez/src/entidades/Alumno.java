@@ -13,7 +13,7 @@ public class Alumno {
 	private Carrera Ocarrera;
 	private Conexion cn;
 	
-	
+	//assadsad
 	public Alumno(){
 		this.idalumno=0;
 		this.nombre="";
