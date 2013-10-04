@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="765.0" xmlns:fx="http://javafx.com/fxml" fx:controller="view.controller.controladorVentana">
+  <children>
+    <BorderPane layoutX="0.0" layoutY="0.0" prefHeight="429.0" prefWidth="765.0">
+      <center>
+        <Pane prefHeight="200.0" prefWidth="200.0">
+          <children>
+            <Label layoutX="36.0" layoutY="76.0" text="Nombre" />
+            <Label layoutX="36.0" layoutY="118.0" text="Apellido Paterno">
+              <font>
+                <Font size="12.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label font="$x1" layoutX="36.0" layoutY="162.0" text="Apellido Materno" />
+            <Label font="$x1" layoutX="36.0" layoutY="207.0" text="Sexo" />
+            <Label font="$x1" layoutX="36.0" layoutY="248.0" text="Edad" />
+            <TextField fx:id="nombre" layoutX="138.0" layoutY="73.0" prefWidth="200.0" />
+            <TextField fx:id="paterno" layoutX="138.0" layoutY="112.0" prefWidth="200.0" />
+            <TextField fx:id="materno" layoutX="138.0" layoutY="156.0" prefWidth="200.0" />
+            <TextField fx:id="edad" layoutX="138.0" layoutY="242.0" prefWidth="200.0" />
+            <ComboBox fx:id="sexo" layoutX="247.0" layoutY="202.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Masculino" />
+                  <String fx:value="Femenino" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+            <StackPane layoutX="1.0" layoutY="301.0" prefHeight="68.0" prefWidth="600.0">
+              <children>
+                <Label fx:id="mensaje" text="Mensaje Aqui" textAlignment="LEFT" textFill="BLACK">
+                  <font>
+                    <Font name="System Bold Italic" size="24.0" />
+                  </font>
+                </Label>
+              </children>
+            </StackPane>
+            <TableView fx:id="tablePersona" layoutX="363.0" layoutY="61.0" prefHeight="258.0" prefWidth="378.0">
+              <columns>
+                <TableColumn fx:id="colNombre" editable="false" prefWidth="75.0" text="Nombre"> 
+                	<cellValueFactory>
+                		<PropertyValueFactory property="nombre"/>
+                	
+                	</cellValueFactory>
+               </TableColumn>
+                <TableColumn fx:id="colPaterno" editable="false" prefWidth="75.0" text="Paterno" >
+                <cellValueFactory>
+                		<PropertyValueFactory property="apaterno"/>
+                	
+                	</cellValueFactory>
+               </TableColumn>
+                                
+                <TableColumn fx:id="colMaterno" editable="false" prefWidth="75.0" text="Materno" >
+                <cellValueFactory>
+                		<PropertyValueFactory property="amaterno"/>
+                	
+                	</cellValueFactory>
+               </TableColumn>
+               
+                <TableColumn fx:id="colSexo" editable="false" prefWidth="75.0" text="Sexo" >
+                	<cellValueFactory>
+                		<PropertyValueFactory property="sexo"/>
+                	
+                	</cellValueFactory>
+               </TableColumn>
+                
+                <TableColumn fx:id="colEdad" editable="false" prefWidth="75.0" text="Edad" >
+                <cellValueFactory>
+                		<PropertyValueFactory property="edad"/>
+                	
+                	</cellValueFactory>
+               </TableColumn>
+                
+                <TableColumn fx:id="colID" prefWidth="75.0" text="ID" visible="false" >
+                	<cellValueFactory>
+                		<PropertyValueFactory property="idpersona"/>
+                	
+                	</cellValueFactory>
+               </TableColumn>
+              </columns>
+            </TableView>
+          </children>
+        </Pane>
+      </center>
+      <top>
+        <ToolBar>
+          <items>
+            <Button fx:id="guardar" mnemonicParsing="false" onAction="#guardar" prefWidth="179.0" text="Guardar" />
+            <Button fx:id="eliminar" mnemonicParsing="false" onAction="#borrar" prefWidth="172.0" text="Eliminar" />
+            <Button fx:id="modificar" mnemonicParsing="false" onAction="#modificar" prefWidth="135.0" text="Modificar" />
+            <Button fx:id="salir" mnemonicParsing="false" onAction="#salir" prefWidth="102.0" text="Salir" />
+          </items>
+        </ToolBar>
+      </top>
+    </BorderPane>
+  </children>
+</AnchorPane>

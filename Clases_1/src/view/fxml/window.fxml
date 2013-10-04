@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+
+<AnchorPane fx:controller="principal.acceso" id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="456.0" xmlns:fx="http://javafx.com/fxml">
+ 	
+  <children>
+    <Pane layoutX="3.0" layoutY="9.0" prefHeight="306.0" prefWidth="453.0">
+      <children>
+        <ToolBar layoutX="5.0" layoutY="4.0" prefWidth="437.0">
+          <items>
+            <Button id="btnpersona" fx:id="btnPersona" mnemonicParsing="false" text="PERSONA" onAction="#clickPersona"/>
+            <Button id="btnproyecto" fx:id="btnProyecto" mnemonicParsing="false" text="PROYECTO" />
+            <Button id="btnsalir" fx:id="btnSalir" mnemonicParsing="false" text="SALIR" />
+          </items>
+        </ToolBar>
+      </children>
+    </Pane>
+  </children>
+</AnchorPane>
